@@ -89,68 +89,75 @@ Django Architecture
 
 
 
+Installation and Setup of Django Project
 --------------------------------------------------------------------
- # Installation and Setup of Django
---------------------------------------------------------------------
-
 1. Install python3 if not installed in your system 
- Try to download the latest version of python it’s python 3.11.0 this time.
-
-Note: Installation of Django in Linux and Mac is similar, here I am showing it in windows for 
-Linux and mac just open terminal in place
-of command prompt and go through the following commands.
-
+ download the latest version of python it’s python 3.11.0 this time.
 --------------------------------------------------------------------
-# Install pip: Open command prompt and enter following command-
---------------------------------------------------------------------------------------
-   python -m pip install -U pip
+2. open the command prompt and make directory folder
+------------------------------------------------------------------------------------
 
+ mkdir Django_project
 --------------------------------------------------------------------
 3.Setting up the Virtual Environment
 --------------------------------------------------------------------
-Create virtual environment in django: We should first go the directory
-where we want to createthe virtual environment then we type the following 
-command to create virtual environment in django
-
-Command=> python -m venv env_site
-
-
-4. Activate the virtual environment => Run the activation script located 
-in the bin directory within the virtual environment folder
-
-For Windows:
-env_site\Scripts\activate.bat
-
-For MacOs/Linux:
-source env_site/bin/activate
+ Create virtual environment in django: We should first go the directory
+ where we want to createthe virtual environment then we type the following 
+ command to create virtual environment in django
+ 
+ 1.It is create venv in Django project directory
+ 
+ python -m venv .venv
+ 
+ 2.It is Activate the venv in Django project directory
+ 
+ .venv\Scripts\Activate [for Windows]
+ 
+ For MacOs/Linux:
+ 
+ source env_site/bin/activate
+ 
 --------------------------------------------------------------------
-# .Install Django: Install django by giving following command
+5 .Install Django: Install django by giving following command
 --------------------------------------------------------------------
-Command => pip install django
 
-
+ Command => pip install django
+ 
 --------------------------------------------------------------------
-#. Start a project by following command
+6. Start a project by following command
 --------------------------------------------------------------------
-django-admin startproject django_proj
 
-
+ django-admin startproject django_proj
+ 
 ----------------------------------
-#.Change directory to django_proj
+7.Change directory to django_proj
 ----------------------------------
-cd django_proj
 
-
+ cd django_proj
+ 
 --------------------------------------------------------------------
-#.Start the server- Start the server by typing following command in cmd-
---------------------------------------------------------------------
-python manage.py runserver
-
---------------------------------------------------------------------
-# On vs code hit this command [folder name =Django project]
+8.Create an empty development database by running the following command 
 --------------------------------------------------------------------
 
-python manage.py startapp projectApp
+ python manage.py migrate [db.sqlit3]
+ 
+--------------------------------------------------------------------
+9.Start the server- Start the server by typing following command in cmd-
+--------------------------------------------------------------------
+
+ python manage.py runserver
+ 
+--------------------------------------------------------------------
+10. Open the folder Django project in Vscode & hit this command
+--------------------------------------------------------------------
+
+ python manage.py startapp projectApp
+
+
+
+
+
+
 
 
 
